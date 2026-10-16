@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Store - Catálogo</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #2c3e50; color: white;">
+    <h1>Food Store</h1>
+    <div>
+      <a href="../cart/cart.html" style="color: white; margin-right: 1.5rem; text-decoration: none; font-weight: bold;">
+        🛒 Carrito (<span id="cartCount">0</span>)
+      </a>
+      <button id="logoutBtn" style="padding: 0.4rem 0.8rem; background: #e74c3c; color: white; border: none; border-radius: 4px; cursor: pointer;">Cerrar Sesión</button>
+    </div>
+  </header>
+
+  <div style="display: flex; gap: 2rem; padding: 2rem;">
+    <!-- Sidebar de Categorías -->
+    <aside style="width: 200px; flex-shrink: 0;">
+      <h3>Categorías</h3>
+      <ul id="categoriesList" style="list-style: none; padding: 0; line-height: 2.2;"></ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main style="flex-grow: 1;">
+      <!-- Buscador -->
+      <div style="margin-bottom: 1.5rem;">
+        <input type="text" id="searchInput" placeholder="Buscar producto por nombre..." style="width: 100%; max-width: 400px; padding: 0.6rem; border: 1px solid #ccc; border-radius: 4px;" />
+      </div>
+
+      <!-- Grilla de Productos -->
+      <div id="productsContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem;"></div>
+      <p id="noResultsMsg" style="display: none; color: #7f8c8d; font-weight: bold; margin-top: 1rem;">No se encontraron productos que coincidan con la búsqueda.</p>
+    </main>
+  </div>
+
+  <script type="module" src="/src/pages/client/home/home.ts"></script>
+</body>
+</html>

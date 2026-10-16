@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Store - Mi Carrito</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #2c3e50; color: white;">
+    <h1>Mi Carrito</h1>
+    <a href="../home/home.html" style="color: white; text-decoration: none; font-weight: bold;">← Volver al Catálogo</a>
+  </header>
+
+  <main style="padding: 2rem; max-width: 800px; margin: 0 auto;">
+    <div id="cartItemsContainer"></div>
+
+    <div id="cartSummary" style="margin-top: 2rem; text-align: right; border-top: 2px solid #eee; padding-top: 1rem; display: none;">
+      <h2>Total: $<span id="totalAmount">0</span></h2>
+    </div>
+
+    <p id="emptyCartMsg" style="display: none; text-align: center; color: #7f8c8d; font-size: 1.2rem; margin-top: 3rem;">
+      Tu carrito está vacío.
+    </p>
+  </main>
+
+  <script type="module" src="/src/pages/client/cart/cart.ts"></script>
+</body>
+</html>
